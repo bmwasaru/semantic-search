@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kenya Constitution Search</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    >
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Search the Kenyan Constitution</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="query"
+            placeholder="Ask a question..."
+            value="{{ query }}"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+    {% for result in results %}
+
+    <div class="card">
+
+        <h3>Page {{ result.page }}</h3>
+
+        <p class="score">
+            Similarity:
+            {{ "%.4f"|format(result.score) }}
+        </p>
+
+        <p>
+            {{ result.text }}
+        </p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
