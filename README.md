@@ -1,6 +1,6 @@
 # Semantic Search
 
-This is a demo for using open models to build semantic seach engine for documents (in this case the constitution of Kenya).
+This is a demo for using open models to build semantic seach engine for documents (in this case the constitution of Kenya). Document is located in the ```data/``` directory together with the generated embeddings and chunks.
 
 ## To get started
 
